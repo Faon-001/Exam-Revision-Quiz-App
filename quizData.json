@@ -1,0 +1,90 @@
+{
+    "subject": "Fluid Statics",
+    "questions": [
+        {
+            "question": "A liquid does not wet the surface of a solid if the angle of contact is:",
+            "options": ["90°", "less than 90°", "greater than 90°", "0°"],
+            "answer": "greater than 90°"
+        },
+        {
+            "question": "Water is flowing at 12 m/s in a horizontal pipe. If the pipe widens to twice its original diameter, the flow speed in the wider section is:",
+            "options": ["6 m/s", "9 m/s", "2 m/s", "3 m/s"],
+            "answer": "6 m/s"
+        },
+        {
+            "question": "Which of the following is true about the Hydrostatic law?",
+            "options": [
+                "Pressure varies constant with depth",
+                "Pressure varies linearly with depth",
+                "Pressure varies exponentially with depth",
+                "None of the above"
+            ],
+            "answer": "Pressure varies linearly with depth"
+        },
+        {
+            "question": "The working of hydraulic system is on the which of the following principle:",
+            "options": [
+                "Archimedes principle",
+                "Pascal’s principle",
+                "Bernoulli’s Principle",
+                "Newton’s second law of motion"
+            ],
+            "answer": "Pascal’s principle"
+        },
+        {
+            "question": "Water rises to height ‘h’ in capillary tube. If the length of capillary tube above the surface of water is made less than ‘h’, then:",
+            "options": [
+                "water does not rise at all",
+                "water rises up the tip of capillary tube and then starts overflowing like a fountain",
+                "water rises up the top of capillary tube and stays there without overflowing",
+                "water rises upto a point a little below the top and stays there"
+            ],
+            "answer": "water rises upto a point a little below the top and stays there"
+        },
+        {
+            "question": "A soap bubble in vacuum has a radius of 3 cm and another soap bubble in vacuum has a radius of 4 cm. If the two bubbles coalesce under isothermal condition, then the radius of the new bubble is:",
+            "options": ["2.3 cm", "4.5 cm", "5 cm", "7 cm"],
+            "answer": "5 cm"
+        },
+        {
+            "question": "A false statement is:",
+            "options": [
+                "Angle of contact 0 < 90°, if cohesive force < adhesive force",
+                "Angle of contact 0 > 90°, if cohesive force > adhesive force",
+                "Angle of contact 0 = 90°, cohesive force = adhesive force",
+                "If the radius of capillary is reduced 1/2, the rise of liquid column becomes four times"
+            ],
+            "answer": "If the radius of capillary is reduced 1/2, the rise of liquid column becomes four times"
+        },
+        {
+            "question": "An house door has a dimension of 3 m² due to the heavy rains the outside air pressure decreases to 0.96 atm but the inside pressure is 1.0 atmosphere. How much force is required to open the house door?",
+            "options": ["25 kN", "24 kN", "23 kN", "26 kN"],
+            "answer": "24 kN"
+        },
+        {
+            "question": "With the rise in temperature, surface tension:",
+            "options": [
+                "Increases",
+                "Decreases",
+                "Remains the same",
+                "Becomes zero"
+            ],
+            "answer": "Decreases"
+        },
+        {
+            "question": "Which of the following statements is true?",
+            "options": [
+                "Surface tension of hot water is more than that of cold water",
+                "Surface tension of hot water is less than that of cold water",
+                "Surface tension of soap water is more than pure water",
+                "Surface tension of liquid is independent of temperature"
+            ],
+            "answer": "Surface tension of hot water is less than that of cold water"
+        },
+        {
+            "question": "Water is flowing with velocity 45 cm/sec in a cylinder of diameter 8 cm. It is connected to a pipe with its end tip of diameter 2 cm. Calculate the velocity of water at this free end at one atmosphere:",
+            "options": ["8 m/s", "45 m/s", "32 m/s", "64 m/s"],
+            "answer": "64 m/s"
+        }
+    ]
+}
