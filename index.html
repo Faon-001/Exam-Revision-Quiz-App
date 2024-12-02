@@ -3,74 +3,240 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Exam Revision Quiz App</title>
-        <link rel="stylesheet" href="assets/css/styles-home.css" />
+        <title>Happy Birthday Paarth</title>
+        <style>
+            /* General Styles */
+            body {
+                margin: 0;
+                padding: 0;
+                font-family: "Poppins", sans-serif;
+                background: linear-gradient(135deg, #2563eb, #60a5fa);
+                overflow: hidden;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                height: 100vh;
+                color: white;
+            }
+
+            /* Heading */
+            .heading {
+                font-size: 3.5rem;
+                font-weight: bold;
+                text-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+                margin-bottom: 20px;
+            }
+
+            /* Book Container */
+            .book {
+                position: relative;
+                width: 600px;
+                height: 700px;
+                perspective: 1500px;
+                cursor: pointer;
+            }
+
+            .cover {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(to right, #1e40af, #2563eb);
+                border-radius: 10px;
+                transform-origin: left;
+                transform: rotateY(0);
+                transition: transform 1.5s ease-in-out;
+                box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                color: white;
+                font-size: 2rem;
+                font-weight: bold;
+                text-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+            }
+
+            .cover:hover {
+                background: linear-gradient(to right, #2563eb, #60a5fa);
+            }
+
+            .pages {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background: #e0f2fe;
+                border-radius: 10px;
+                z-index: -1;
+                overflow: hidden;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding: 20px;
+                opacity: 0;
+                transform: scale(0.9);
+                transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+            }
+
+            .book.open .cover {
+                transform: rotateY(-150deg);
+            }
+
+            .book.open .pages {
+                opacity: 1;
+                transform: scale(1);
+            }
+
+            /* Inside the Pages */
+            .image-container {
+                width: 100%;
+                height: 50%;
+                background: #fff;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 5px;
+                overflow: hidden;
+                margin-bottom: 20px;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            }
+
+            .image-container img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain; /* Ensure the image is contained properly */
+            }
+
+            .message {
+                font-size: 1.3rem;
+                color: #1e3a8a;
+                line-height: 1.8;
+                text-align: center;
+            }
+
+            .message b {
+                color: #1e40af;
+                font-size: 1.5rem;
+            }
+
+            /* Balloon Effect */
+            .balloon {
+                position: absolute;
+                width: 50px;
+                height: 80px;
+                background-color: #ff5722;
+                border-radius: 50%;
+                animation: float 5s infinite ease-in-out;
+                opacity: 0.8;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            }
+
+            .balloon:nth-child(2) {
+                background-color: #4caf50;
+                animation-duration: 6s;
+                animation-delay: 1s;
+            }
+
+            .balloon:nth-child(3) {
+                background-color: #ffeb3b;
+                animation-duration: 7s;
+                animation-delay: 2s;
+            }
+
+            .balloon:nth-child(4) {
+                background-color: #2196f3;
+                animation-duration: 8s;
+                animation-delay: 3s;
+            }
+
+            /* Balloon Floating Animation */
+            @keyframes float {
+                0% {
+                    transform: translateY(100vh);
+                    opacity: 1;
+                }
+                100% {
+                    transform: translateY(-100vh);
+                    opacity: 0;
+                }
+            }
+
+            /* Circular Image Style */
+            .profile-image {
+                position: absolute;
+                top: 120px; /* Positioned above the book */
+                left: 50%;
+                transform: translateX(-50%);
+                width: 120px;
+                height: 120px;
+                border-radius: 50%;
+                border: 5px solid white;
+                overflow: hidden;
+                box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+                z-index: 2;
+            }
+
+            .profile-image img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover; /* Ensure image covers the circle */
+            }
+        </style>
     </head>
     <body>
-        <header>
-            <h1 class="mainHead">Exam Revision Quiz App</h1>
-        </header>
+        <!-- Happy Birthday Heading -->
+        <div class="heading">🎉 Happy Birthday Paarth 🎉</div>
 
-        <main>
-            <section class="subSelect">
-                <article class="math">
-                    <a href="quiz.html" class="subject-link">
-                        <figure class="subImg">
-                            <img
-                                src="https://i.pinimg.com/736x/85/88/37/858837d78f22cbcfc5a2bc966ba2be6b.jpg"
-                                alt="Math icon"
-                            />
-                        </figure>
-                        <div class="subName">Math</div>
-                    </a>
-                </article>
+        <!-- Balloons -->
+        <div class="balloon" style="left: 20%; animation-delay: 0s"></div>
+        <div class="balloon" style="left: 40%; animation-delay: 1s"></div>
+        <div class="balloon" style="left: 60%; animation-delay: 2s"></div>
+        <div class="balloon" style="left: 80%; animation-delay: 3s"></div>
 
-                <article class="computer">
-                    <a href="quiz.html" class="subject-link">
-                        <figure class="subImg">
-                            <img
-                                src="https://i.pinimg.com/736x/da/40/4b/da404bf7bd4398c9f256c65507d3c860.jpg"
-                                alt="Computer Science icon"
-                            />
-                        </figure>
-                        <div class="subName">Computer</div>
-                    </a>
-                </article>
+        <!-- Circular Image on top of "Click to Open" -->
 
-                <article class="physic">
-                    <a href="quiz.html" class="subject-link">
-                        <figure class="subImg">
-                            <img
-                                src="https://i.pinimg.com/736x/74/2d/14/742d14929e136a5338153cafd2d44eea.jpg"
-                                alt="Physics icon"
-                            />
-                        </figure>
-                        <div class="subName">Physics</div>
-                    </a>
-                </article>
-
-                <article class="chemistry">
-                    <a href="quiz.html" class="subject-link">
-                        <figure class="subImg">
-                            <img
-                                src="https://i.pinimg.com/736x/d9/a3/6b/d9a36b762f65b17580c3f0bfa518dd0f.jpg"
-                                alt="Chemistry icon"
-                            />
-                        </figure>
-                        <div class="subName">Chemistry</div>
-                    </a>
-                </article>
-            </section>
-        </main>
-
-        <footer>
-            <p>&copy; 2024 Exam Revision Quiz App | Designed by Faon</p>
-            <div class="footer-links">
-                <a href="index.html">Home</a> | <a href="about.html">About</a> |
-                <a href="privacy-policy.html">Privacy Policy</a> |
-                <a href="terms-of-service.html">Terms of Service</a> |
-                <a href="contact.html">Contact</a>
+        <!-- Book -->
+        <div class="book" id="book">
+            <div class="cover">
+                <div class="profile-image">
+                    <img src="2.jpg" alt="Profile" />
+                </div>
+                Click to Open
             </div>
-        </footer>
+            <div class="pages">
+                <div class="message">
+                    Bro,<br /><br />
+                    You’ve always been the guy I’ve looked up to whenever I was
+                    stuck in life. I’ve admired you in so many ways, in
+                    everything I did. You’ve been that one constant person who
+                    made me feel like I wasn’t alone when everyone else just
+                    clowned me.<br /><br />
+                    8 years of friendship, man. 4 years in real life and 4 years
+                    through calls and texts. I don’t think anyone else could’ve
+                    been the friend you’ve been to me. Till 7th grade, I don’t
+                    even know if we were close, but that year changed
+                    everything. Our last grade together, walking around the
+                    ground, sitting on the grass, just talking—those moments
+                    will always stay with me.<br /><br />
+                    Now, we barely get to talk, maybe once in a week or even
+                    months, but I know we’re still there for each other. You’ve
+                    always had my back, no matter the time or situation, and I
+                    really hope I’ve been able to do the same for you.<br /><br />
+                    I don’t know if I’ve done anything that makes you look up to
+                    me the way I do to you, but you’ll always be that person for
+                    me.<br /><br />
+                    <b>Happy birthday, bhai. Stay You.</b>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            // Open the book when clicking the cover
+            const book = document.getElementById("book");
+            book.addEventListener("click", () => {
+                book.classList.toggle("open");
+            });
+        </script>
     </body>
 </html>
